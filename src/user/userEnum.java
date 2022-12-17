@@ -1,2 +1,8 @@
-package user;public enum userEnum {
+package user;
+
+public enum userEnum {
+    ADMIN,
+    EMPLOOYE,
+    CUSTOMER
 }
+
