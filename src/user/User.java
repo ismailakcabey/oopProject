@@ -1,11 +1,10 @@
 package user;
 
-
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-public class User {
+public class User extends userExtended{
     private List<String> userList = new ArrayList<String>();
     private String fullname;
     private String email;
@@ -18,14 +17,35 @@ public class User {
     private departmentEnum department ;
 
     // yapıcı blok bu bloğa create edilmek istenen user bilgileri yollanıyor .
-    public void User(String fullname, String email, String password, String phoneNumber , String role , String department){
+    public void User(){
+
         System.out.println("user set fonksiyonu");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("FullName: ");
+        String fullname = scanner.next();
         setFullName(fullname);
+        System.out.println("email: ");
+        String email = scanner.next();
         setEmail(email);
+        System.out.println("Password: ");
+        String password = scanner.next();
         setPassword(password);
+        System.out.println("phoneNumber: ");
+        String phoneNumber = scanner.next();
         setPhoneNumber(phoneNumber);
+        System.out.println("role (ADMIN,\n" +
+                "    EMPLOOYE,\n" +
+                "    CUSTOMER): ");
+        String role = scanner.next();
         setRole(role);
-        setRole(department);
+            System.out.println("department (DEVELOPMENT,\n" +
+                    "    CRM,\n" +
+                    "    SALES,\n" +
+                    "    FINANCE): ");
+            String department = scanner.next();
+            setDepartment(department);
+
+
         System.out.println(getUserModel());
         String user = "Full Name:  "+this.fullname+"\nEmail: " + this.email + "\npassword:    " + this.password + "\nphoneNumber:  " + this.phoneNumber+ "\nrole:  " + this.role+ "\ndepartment:  " + this.department;
         setList(user);
@@ -36,10 +56,27 @@ public class User {
         this.email = email;
     }
 
-    public void setDepartment(String department) {
+    public String getEmail() {
 
-        this.email = email;
+        return  this.email;
     }
+    public String getPassword() {
+        return  this.password;
+    }
+    public String getFullname() {
+        return  this.fullname;
+    }
+    public String getPhoneNumber() {
+        return  this.phoneNumber;
+    }
+    public departmentEnum getDepartment() {
+        return  this.department;
+    }
+    public userEnum getRole() {
+        return  this.role;
+    }
+
+
 
     public void setList(String user) {
 
@@ -51,10 +88,18 @@ public class User {
 
         this.fullname = fullname;
     }
+
+
     public void setRole(String role)
     {
 
         this.role = userEnum.valueOf(role);
+    }
+
+    public void setDepartment(String department)
+    {
+
+        this.department = departmentEnum.valueOf(department);
     }
 
     public void setPassword(String password)
