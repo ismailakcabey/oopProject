@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User extends userExtended{
+public class User extends userExtended {
     private List<String> userList = new ArrayList<String>();
     private String fullname;
     private String email;
@@ -19,25 +19,31 @@ public class User extends userExtended{
     // yapıcı blok bu bloğa create edilmek istenen user bilgileri yollanıyor .
     public void User(){
 
-        System.out.println("user set fonksiyonu");
+        System.out.println("USER CREATE FONKSIYONU");
         Scanner scanner = new Scanner(System.in);
+        System.out.println("---------------");
         System.out.println("FullName: ");
         String fullname = scanner.next();
         setFullName(fullname);
+        System.out.println("---------------");
         System.out.println("email: ");
         String email = scanner.next();
         setEmail(email);
+        System.out.println("---------------");
         System.out.println("Password: ");
         String password = scanner.next();
         setPassword(password);
+        System.out.println("---------------");
         System.out.println("phoneNumber: ");
         String phoneNumber = scanner.next();
         setPhoneNumber(phoneNumber);
+        System.out.println("---------------");
         System.out.println("role (ADMIN,\n" +
                 "    EMPLOOYE,\n" +
                 "    CUSTOMER): ");
         String role = scanner.next();
         setRole(role);
+        System.out.println("---------------");
             System.out.println("department (DEVELOPMENT,\n" +
                     "    CRM,\n" +
                     "    SALES,\n" +
@@ -45,10 +51,11 @@ public class User extends userExtended{
             String department = scanner.next();
             setDepartment(department);
 
-
+        System.out.println("---------------");
         System.out.println(getUserModel());
         String user = "Full Name:  "+this.fullname+"\nEmail: " + this.email + "\npassword:    " + this.password + "\nphoneNumber:  " + this.phoneNumber+ "\nrole:  " + this.role+ "\ndepartment:  " + this.department;
         setList(user);
+        System.out.println("---------------");
     }
 
     public void setEmail(String email) {

@@ -1,6 +1,6 @@
 package user;
 
-public class userExtended {
+public class userExtended extends userPrice{
     private Integer isDebt;
     private Integer salary;
     private Integer budget;

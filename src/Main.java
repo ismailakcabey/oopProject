@@ -13,7 +13,7 @@ public static void main(String[] args) {
         boolean isUser = scanner.nextBoolean();
 
         if(isUser){
-            Boolean isVerify = userLoginObj.userLogin(objUser.getEmail() , objUser.getPassword());
+            boolean isVerify = userLoginObj.userLogin(objUser.getEmail() , objUser.getPassword());
             System.out.println("user bilgisi : "+isVerify);
             if(!isVerify){
                 objUser.User();
