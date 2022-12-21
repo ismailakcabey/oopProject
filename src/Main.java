@@ -8,7 +8,7 @@ public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         User objUser = new User();
         userLogin userLoginObj = new userLogin();
-        objUser.userExtended();
+
         System.out.println("User bilginiz mevcut mu ? (true/false)");
         boolean isUser = scanner.nextBoolean();
 
@@ -20,6 +20,7 @@ public static void main(String[] args) {
                 System.out.println("------- user bilgileri setlenen ---------");
                 isVerify = userLoginObj.userLogin(objUser.getEmail() , objUser.getPassword());
                 System.out.println("user bilgisi : "+isVerify);
+
             }
         }
         else{

@@ -1,10 +1,9 @@
 package user;
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User extends userExtended {
+public class User extends foreignCurrency {
     private List<String> userList = new ArrayList<String>();
     private String fullname;
     private String email;

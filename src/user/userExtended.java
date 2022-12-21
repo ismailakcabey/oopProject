@@ -1,6 +1,6 @@
 package user;
 
-public class userExtended extends userPrice{
+public class userExtended extends foreignCurrency{
     private Integer isDebt;
     private Integer salary;
     private Integer budget;
