@@ -37,18 +37,39 @@ public class User extends foreignCurrency {
         String phoneNumber = scanner.next();
         setPhoneNumber(phoneNumber);
         System.out.println("---------------");
-        System.out.println("role (ADMIN,\n" +
-                "    EMPLOOYE,\n" +
-                "    CUSTOMER): ");
-        String role = scanner.next();
-        setRole(role);
+        boolean kontrol = true;
+        while (kontrol) {
+            try {
+                System.out.println("role (ADMIN,\n" +
+                        "    EMPLOOYE,\n" +
+                        "    CUSTOMER: ");
+                String role = scanner.next();
+                setRole(role);
+                kontrol = false;
+            } catch (Exception exception) {
+                System.out.println("Hatalı yanıt girdiniz.");
+                System.out.println("Lütfen tekrar deneyin.");
+            }
+        }
+
         System.out.println("---------------");
-            System.out.println("department (DEVELOPMENT,\n" +
-                    "    CRM,\n" +
-                    "    SALES,\n" +
-                    "    FINANCE): ");
-            String department = scanner.next();
-            setDepartment(department);
+        boolean kontrol1 = true;
+        while (kontrol1) {
+            try {
+                System.out.println("department (DEVELOPMENT,\n" +
+                        "    CRM,\n" +
+                        "    SALES,\n" +
+                        "    FINANCE: ");
+                String department = scanner.next();
+                setDepartment(department);
+                kontrol1=false;
+            } catch (Exception exception) {
+                System.out.println("Hatalı yanıt girdiniz.");
+                System.out.println("Lütfen tekrar deneyin.");
+            }
+        }
+
+
 
         System.out.println("---------------");
         System.out.println(getUserModel());
