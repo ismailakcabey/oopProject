@@ -1,4 +1,6 @@
 package user;
+import com.sun.tools.javac.Main;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,13 +70,9 @@ public class User extends foreignCurrency {
                 System.out.println("Lütfen tekrar deneyin.");
             }
         }
-
-
-
         System.out.println("---------------");
         System.out.println(getUserModel());
         String user = "Full Name:  "+this.fullname+"\nEmail: " + this.email + "\npassword:    " + this.password + "\nphoneNumber:  " + this.phoneNumber+ "\nrole:  " + this.role+ "\ndepartment:  " + this.department;
-        setList(user);
         System.out.println("---------------");
     }
 
