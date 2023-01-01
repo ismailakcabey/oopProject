@@ -34,9 +34,10 @@ import java.util.Scanner;
          } else {
              objUser.User();
          }
-         int secim = -1;
-         boolean kontrol = true;
-         while (secim != 7) {
+
+         boolean islem = true;
+         boolean kontrol = false;
+         while (islem) {
              System.out.println("1 - Doviz islemleri ");
              System.out.println("2 - kredi islemleri ");
              System.out.println("3 - hisse islemleri ");
@@ -44,6 +45,9 @@ import java.util.Scanner;
              System.out.println("5 - İstanbul Kart Dolumu");
              System.out.println("6 - Bakiye Sorgulama");
              System.out.println("7 - Cikis ");
+             System.out.println("yapmak istediginiz islemi seciniz : ");
+             int secim = scanner.nextInt();
+             if(secim == 7)islem = false ;
              while (kontrol) {
                  try {
                      secim = scanner.nextInt();
@@ -135,6 +139,8 @@ import java.util.Scanner;
                  case 3:
 
              }
+             System.out.println("yeni islem istiyor musunuz ? ");
+             islem = scanner.nextBoolean();
          }
      }
  }
