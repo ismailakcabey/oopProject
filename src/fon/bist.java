@@ -8,7 +8,7 @@ import java.util.List;
 public class bist {
     private User user;
     private Integer stockAmount;
-    private stockEnum stock;
+    stockEnum stock;
 
     private List<String> bistList = new ArrayList<String>();
 
@@ -18,11 +18,7 @@ public class bist {
     public void setUser(User user){
         this.user = user;
     }
-    public void setStockAmount(Integer stockAmount , stockEnum stock){
-        this.stock = stock;
-        this.stockAmount=stockAmount;
-        this.bistList.add("-------\nhisse : "+ stock + "birimi : " + stockAmount);
-    }
+
 
 
     public List getListBist() {
@@ -33,4 +29,12 @@ public class bist {
         return stockAmount;
     }
 
+    public void setStockAmount() {
+        this.stock = stock;
+        this.stockAmount=stockAmount;
+        this.bistList.add("-------\nhisse : "+ stock + "birimi : " + stockAmount);
+    }
+
+    public void setStockAmount(String stocks) {
+    }
 }

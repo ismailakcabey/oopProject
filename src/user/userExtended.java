@@ -35,12 +35,12 @@ public class userExtended extends foreignCurrency{
 
         this.budget = budget;
     }
-
-    public void setIsDebtAmount(Integer isDebtAmount)
+    public void setIsDebtAmount(Integer budget)
     {
 
         this.isDebtAmount = isDebtAmount;
     }
+
 
     public Integer getIsDebt()
     {
@@ -60,9 +60,11 @@ public class userExtended extends foreignCurrency{
         return this.budget;
     }
 
-    public Integer getIsDebtAmount()
+    public void getIsDebtAmount(Integer budget)
     {
 
-        return this.isDebtAmount;
+        this.isDebtAmount = isDebtAmount;
     }
+
+
 }

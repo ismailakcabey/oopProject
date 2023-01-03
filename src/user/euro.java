@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class euro extends dolar {
     private double amount;
-    private Double euroPrice = 25.5;
+    public Double euroPrice = 25.5;
 
     public void euro(){
         System.out.println("euro alma fonk");
