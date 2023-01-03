@@ -9,7 +9,8 @@ public abstract class IstKartDolum {
     private int yuklemeOnay;
     Scanner scanner = new Scanner(System.in);
     public void setIstKartID(){
-        System.out.println("İstanbul kart İD'nizi giriniz:");
+        System.out.println("İstanbul kart İD'nizi giriniz :");
+
         istKartID=scanner.nextInt();
         System.out.println("Ne kadar yukleme yapmak istiyorusunuz: ");
         yukleme=scanner.nextInt();
